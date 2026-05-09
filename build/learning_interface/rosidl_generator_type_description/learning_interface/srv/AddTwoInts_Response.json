@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "learning_interface/srv/AddTwoInts_Response",
+      "fields": [
+        {
+          "name": "sum",
+          "type": {
+            "type_id": 8,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "learning_interface/srv/AddTwoInts_Response",
+      "hash_string": "RIHS01_10419732fb9c9e21990b91b97df82515c1ac86a72091896d3cd0f15e6da9632c"
+    }
+  ]
+}

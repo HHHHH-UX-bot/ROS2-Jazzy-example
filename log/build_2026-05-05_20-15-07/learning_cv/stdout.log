@@ -1,0 +1,35 @@
+running egg_info
+creating ../../../build/learning_cv/learning_cv.egg-info
+writing ../../../build/learning_cv/learning_cv.egg-info/PKG-INFO
+writing dependency_links to ../../../build/learning_cv/learning_cv.egg-info/dependency_links.txt
+writing entry points to ../../../build/learning_cv/learning_cv.egg-info/entry_points.txt
+writing requirements to ../../../build/learning_cv/learning_cv.egg-info/requires.txt
+writing top-level names to ../../../build/learning_cv/learning_cv.egg-info/top_level.txt
+writing manifest file '../../../build/learning_cv/learning_cv.egg-info/SOURCES.txt'
+reading manifest file '../../../build/learning_cv/learning_cv.egg-info/SOURCES.txt'
+writing manifest file '../../../build/learning_cv/learning_cv.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/intel/example_ws/build/learning_cv/build
+creating /home/intel/example_ws/build/learning_cv/build/lib
+creating /home/intel/example_ws/build/learning_cv/build/lib/learning_cv
+copying learning_cv/__init__.py -> /home/intel/example_ws/build/learning_cv/build/lib/learning_cv
+copying learning_cv/cv_bridge_test.py -> /home/intel/example_ws/build/learning_cv/build/lib/learning_cv
+running install
+running install_lib
+creating /home/intel/example_ws/install/learning_cv/lib/python3.12/site-packages/learning_cv
+copying /home/intel/example_ws/build/learning_cv/build/lib/learning_cv/__init__.py -> /home/intel/example_ws/install/learning_cv/lib/python3.12/site-packages/learning_cv
+copying /home/intel/example_ws/build/learning_cv/build/lib/learning_cv/cv_bridge_test.py -> /home/intel/example_ws/install/learning_cv/lib/python3.12/site-packages/learning_cv
+byte-compiling /home/intel/example_ws/install/learning_cv/lib/python3.12/site-packages/learning_cv/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/intel/example_ws/install/learning_cv/lib/python3.12/site-packages/learning_cv/cv_bridge_test.py to cv_bridge_test.cpython-312.pyc
+running install_data
+creating /home/intel/example_ws/install/learning_cv/share/ament_index
+creating /home/intel/example_ws/install/learning_cv/share/ament_index/resource_index
+creating /home/intel/example_ws/install/learning_cv/share/ament_index/resource_index/packages
+copying resource/learning_cv -> /home/intel/example_ws/install/learning_cv/share/ament_index/resource_index/packages
+copying package.xml -> /home/intel/example_ws/install/learning_cv/share/learning_cv
+running install_egg_info
+Copying ../../../build/learning_cv/learning_cv.egg-info to /home/intel/example_ws/install/learning_cv/lib/python3.12/site-packages/learning_cv-0.0.0-py3.12.egg-info
+running install_scripts
+Installing cv_bridge_test script to /home/intel/example_ws/install/learning_cv/lib/learning_cv
+writing list of installed files to '/home/intel/example_ws/build/learning_cv/install.log'

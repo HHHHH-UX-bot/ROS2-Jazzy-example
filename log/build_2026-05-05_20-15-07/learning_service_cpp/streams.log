@@ -1,0 +1,68 @@
+[0.377s] Invoking command in '/home/intel/example_ws/build/learning_service_cpp': AMENT_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/intel/example_ws/install/learning_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/intel/example_ws/install/learning_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/intel/example_ws/src/ros2_21_tutorials/learning_service_cpp -DCMAKE_INSTALL_PREFIX=/home/intel/example_ws/install/learning_service_cpp
+[0.435s] -- The C compiler identification is GNU 13.3.0
+[0.504s] -- The CXX compiler identification is GNU 13.3.0
+[0.525s] -- Detecting C compiler ABI info
+[0.618s] -- Detecting C compiler ABI info - done
+[0.628s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.628s] -- Detecting C compile features
+[0.628s] -- Detecting C compile features - done
+[0.639s] -- Detecting CXX compiler ABI info
+[0.724s] -- Detecting CXX compiler ABI info - done
+[0.733s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.733s] -- Detecting CXX compile features
+[0.734s] -- Detecting CXX compile features - done
+[0.738s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.855s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.947s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.992s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.007s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.026s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.047s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.134s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.138s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.214s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.237s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.262s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.348s] -- Found learning_interface: 0.0.0 (/home/intel/example_ws/install/learning_interface/share/learning_interface/cmake)
+[1.395s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.491s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.491s] -- Configured cppcheck include dirs: 
+[1.491s] -- Configured cppcheck exclude dirs and/or files: 
+[1.491s] -- Added test 'lint_cmake' to check CMake code style
+[1.492s] -- Added test 'uncrustify' to check C / C++ code style
+[1.492s] -- Configured uncrustify additional arguments: 
+[1.492s] -- Added test 'xmllint' to check XML markup files
+[1.493s] -- Configuring done (1.1s)
+[1.502s] -- Generating done (0.0s)
+[1.505s] -- Build files have been written to: /home/intel/example_ws/build/learning_service_cpp
+[1.514s] Invoked command in '/home/intel/example_ws/build/learning_service_cpp' returned '0': AMENT_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/intel/example_ws/install/learning_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/intel/example_ws/install/learning_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/intel/example_ws/src/ros2_21_tutorials/learning_service_cpp -DCMAKE_INSTALL_PREFIX=/home/intel/example_ws/install/learning_service_cpp
+[1.515s] Invoking command in '/home/intel/example_ws/build/learning_service_cpp': AMENT_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/intel/example_ws/install/learning_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/intel/example_ws/install/learning_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/intel/example_ws/build/learning_service_cpp -- -j14 -l14
+[1.554s] [ 25%] [32mBuilding CXX object CMakeFiles/service_adder_server.dir/src/service_adder_server.cpp.o[0m
+[1.555s] [ 50%] [32mBuilding CXX object CMakeFiles/service_adder_client.dir/src/service_adder_client.cpp.o[0m
+[4.137s] [ 75%] [32m[1mLinking CXX executable service_adder_server[0m
+[4.153s] [100%] [32m[1mLinking CXX executable service_adder_client[0m
+[4.290s] [100%] Built target service_adder_client
+[4.305s] [100%] Built target service_adder_server
+[4.322s] Invoked command in '/home/intel/example_ws/build/learning_service_cpp' returned '0': AMENT_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/intel/example_ws/install/learning_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/intel/example_ws/install/learning_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/intel/example_ws/build/learning_service_cpp -- -j14 -l14
+[4.324s] Invoking command in '/home/intel/example_ws/build/learning_service_cpp': AMENT_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/intel/example_ws/install/learning_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/intel/example_ws/install/learning_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/intel/example_ws/build/learning_service_cpp
+[4.338s] -- Install configuration: ""
+[4.338s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/lib/learning_service_cpp/service_adder_server
+[4.339s] -- Set non-toolchain portion of runtime path of "/home/intel/example_ws/install/learning_service_cpp/lib/learning_service_cpp/service_adder_server" to ""
+[4.339s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/lib/learning_service_cpp/service_adder_client
+[4.339s] -- Set non-toolchain portion of runtime path of "/home/intel/example_ws/install/learning_service_cpp/lib/learning_service_cpp/service_adder_client" to ""
+[4.339s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/ament_index/resource_index/package_run_dependencies/learning_service_cpp
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/ament_index/resource_index/parent_prefix_path/learning_service_cpp
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/environment/ament_prefix_path.sh
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/environment/ament_prefix_path.dsv
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/environment/path.sh
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/environment/path.dsv
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/local_setup.bash
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/local_setup.sh
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/local_setup.zsh
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/local_setup.dsv
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/package.dsv
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/ament_index/resource_index/packages/learning_service_cpp
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/cmake/learning_service_cppConfig.cmake
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/cmake/learning_service_cppConfig-version.cmake
+[4.340s] -- Installing: /home/intel/example_ws/install/learning_service_cpp/share/learning_service_cpp/package.xml
+[4.342s] Invoked command in '/home/intel/example_ws/build/learning_service_cpp' returned '0': AMENT_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/intel/example_ws/install/learning_interface:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/intel/example_ws/install/learning_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/intel/example_ws/install/learning_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/intel/example_ws/build/learning_service_cpp

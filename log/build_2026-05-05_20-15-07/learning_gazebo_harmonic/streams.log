@@ -1,0 +1,60 @@
+[2.014s] Invoking command in '/home/intel/example_ws/src/ros2_21_tutorials/learning_gazebo_harmonic': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/intel/example_ws/build/learning_gazebo_harmonic/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/intel/example_ws/install/learning_gazebo_harmonic/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/learning_gazebo_harmonic build --build-base /home/intel/example_ws/build/learning_gazebo_harmonic/build install --record /home/intel/example_ws/build/learning_gazebo_harmonic/install.log --single-version-externally-managed install_data
+[2.302s] running egg_info
+[2.302s] creating ../../../build/learning_gazebo_harmonic/learning_gazebo_harmonic.egg-info
+[2.320s] writing ../../../build/learning_gazebo_harmonic/learning_gazebo_harmonic.egg-info/PKG-INFO
+[2.320s] writing dependency_links to ../../../build/learning_gazebo_harmonic/learning_gazebo_harmonic.egg-info/dependency_links.txt
+[2.321s] writing requirements to ../../../build/learning_gazebo_harmonic/learning_gazebo_harmonic.egg-info/requires.txt
+[2.321s] writing top-level names to ../../../build/learning_gazebo_harmonic/learning_gazebo_harmonic.egg-info/top_level.txt
+[2.322s] writing manifest file '../../../build/learning_gazebo_harmonic/learning_gazebo_harmonic.egg-info/SOURCES.txt'
+[2.361s] reading manifest file '../../../build/learning_gazebo_harmonic/learning_gazebo_harmonic.egg-info/SOURCES.txt'
+[2.362s] writing manifest file '../../../build/learning_gazebo_harmonic/learning_gazebo_harmonic.egg-info/SOURCES.txt'
+[2.362s] running build
+[2.362s] running build_py
+[2.362s] creating /home/intel/example_ws/build/learning_gazebo_harmonic/build
+[2.362s] creating /home/intel/example_ws/build/learning_gazebo_harmonic/build/lib
+[2.362s] creating /home/intel/example_ws/build/learning_gazebo_harmonic/build/lib/learning_gazebo_harmonic
+[2.362s] copying learning_gazebo_harmonic/__init__.py -> /home/intel/example_ws/build/learning_gazebo_harmonic/build/lib/learning_gazebo_harmonic
+[2.362s] running install
+[2.369s] running install_lib
+[2.388s] creating /home/intel/example_ws/install/learning_gazebo_harmonic/lib/python3.12/site-packages/learning_gazebo_harmonic
+[2.388s] copying /home/intel/example_ws/build/learning_gazebo_harmonic/build/lib/learning_gazebo_harmonic/__init__.py -> /home/intel/example_ws/install/learning_gazebo_harmonic/lib/python3.12/site-packages/learning_gazebo_harmonic
+[2.388s] byte-compiling /home/intel/example_ws/install/learning_gazebo_harmonic/lib/python3.12/site-packages/learning_gazebo_harmonic/__init__.py to __init__.cpython-312.pyc
+[2.389s] running install_data
+[2.389s] creating /home/intel/example_ws/install/learning_gazebo_harmonic/share/ament_index
+[2.389s] creating /home/intel/example_ws/install/learning_gazebo_harmonic/share/ament_index/resource_index
+[2.389s] creating /home/intel/example_ws/install/learning_gazebo_harmonic/share/ament_index/resource_index/packages
+[2.390s] copying resource/learning_gazebo_harmonic -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/ament_index/resource_index/packages
+[2.390s] copying package.xml -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic
+[2.390s] creating /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/launch
+[2.391s] copying launch/load_urdf_into_gazebo_harmonic.launch.py -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/launch
+[2.391s] copying launch/load_mbot_rgbd_into_maze_gazebo_harmonic.launch.py -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/launch
+[2.391s] copying launch/load_mbot_lidar_into_gazebo_harmonic.launch.py -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/launch
+[2.392s] copying launch/load_mbot_rgbd_into_gazebo_harmonic.launch.py -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/launch
+[2.392s] copying launch/load_mbot_lidar_into_maze_gazebo_harmonic.launch.py -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/launch
+[2.392s] copying launch/load_mbot_camera_into_gazebo_harmonic.launch.py -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/launch
+[2.392s] creating /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf
+[2.392s] copying urdf/mbot_with_lidar.sdf -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf
+[2.392s] copying urdf/mbot_with_rgbd_gazebo_harmonic.xacro -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf
+[2.392s] copying urdf/mbot_with_camera_gazebo_harmonic.xacro -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf
+[2.393s] copying urdf/mbot_base_gazebo_harmonic.xacro -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf
+[2.393s] copying urdf/mbot_with_lidar_gazebo_harmonic.xacro -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf
+[2.393s] copying urdf/mbot_gazebo_harmonic.xacro -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf
+[2.393s] creating /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf/sensors
+[2.393s] copying urdf/sensors/camera_gazebo_harmonic.xacro -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf/sensors
+[2.393s] copying urdf/sensors/rgbd_gazebo_harmonic.xacro -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf/sensors
+[2.393s] copying urdf/sensors/lidar_gazebo_harmonic.xacro -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/urdf/sensors
+[2.393s] creating /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/worlds
+[2.393s] copying worlds/empty.sdf -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/worlds
+[2.393s] copying worlds/maze.sdf -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/worlds
+[2.393s] copying worlds/depot.sdf -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/worlds
+[2.394s] creating /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/rviz
+[2.394s] creating /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/config
+[2.394s] copying config/ros_gz_bridge_mbot_rgbd.yaml -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/config
+[2.394s] copying config/ros_gz_bridge_mbot_camera.yaml -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/config
+[2.394s] copying config/ros_gz_bridge_mbot_lidar.yaml -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/config
+[2.394s] copying config/ros_gz_bridge_mbot.yaml -> /home/intel/example_ws/install/learning_gazebo_harmonic/share/learning_gazebo_harmonic/config
+[2.394s] running install_egg_info
+[2.411s] Copying ../../../build/learning_gazebo_harmonic/learning_gazebo_harmonic.egg-info to /home/intel/example_ws/install/learning_gazebo_harmonic/lib/python3.12/site-packages/learning_gazebo_harmonic-0.0.0-py3.12.egg-info
+[2.412s] running install_scripts
+[2.538s] writing list of installed files to '/home/intel/example_ws/build/learning_gazebo_harmonic/install.log'
+[2.616s] Invoked command in '/home/intel/example_ws/src/ros2_21_tutorials/learning_gazebo_harmonic' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/intel/example_ws/build/learning_gazebo_harmonic/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/intel/example_ws/install/learning_gazebo_harmonic/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/learning_gazebo_harmonic build --build-base /home/intel/example_ws/build/learning_gazebo_harmonic/build install --record /home/intel/example_ws/build/learning_gazebo_harmonic/install.log --single-version-externally-managed install_data

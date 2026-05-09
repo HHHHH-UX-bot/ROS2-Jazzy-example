@@ -1,0 +1,51 @@
+[2.118s] Invoking command in '/home/intel/example_ws/src/ros2_21_tutorials/learning_tf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/intel/example_ws/build/learning_tf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/learning_tf build --build-base /home/intel/example_ws/build/learning_tf/build install --record /home/intel/example_ws/build/learning_tf/install.log --single-version-externally-managed install_data
+[2.601s] running egg_info
+[2.601s] creating ../../../build/learning_tf/learning_tf.egg-info
+[2.602s] writing ../../../build/learning_tf/learning_tf.egg-info/PKG-INFO
+[2.602s] writing dependency_links to ../../../build/learning_tf/learning_tf.egg-info/dependency_links.txt
+[2.602s] writing entry points to ../../../build/learning_tf/learning_tf.egg-info/entry_points.txt
+[2.602s] writing requirements to ../../../build/learning_tf/learning_tf.egg-info/requires.txt
+[2.602s] writing top-level names to ../../../build/learning_tf/learning_tf.egg-info/top_level.txt
+[2.602s] writing manifest file '../../../build/learning_tf/learning_tf.egg-info/SOURCES.txt'
+[2.602s] reading manifest file '../../../build/learning_tf/learning_tf.egg-info/SOURCES.txt'
+[2.602s] writing manifest file '../../../build/learning_tf/learning_tf.egg-info/SOURCES.txt'
+[2.602s] running build
+[2.602s] running build_py
+[2.602s] creating /home/intel/example_ws/build/learning_tf/build
+[2.602s] creating /home/intel/example_ws/build/learning_tf/build/lib
+[2.603s] creating /home/intel/example_ws/build/learning_tf/build/lib/learning_tf
+[2.603s] copying learning_tf/static_tf_broadcaster.py -> /home/intel/example_ws/build/learning_tf/build/lib/learning_tf
+[2.603s] copying learning_tf/tf_listener.py -> /home/intel/example_ws/build/learning_tf/build/lib/learning_tf
+[2.603s] copying learning_tf/__init__.py -> /home/intel/example_ws/build/learning_tf/build/lib/learning_tf
+[2.603s] copying learning_tf/turtle_following.py -> /home/intel/example_ws/build/learning_tf/build/lib/learning_tf
+[2.603s] copying learning_tf/turtle_tf_broadcaster.py -> /home/intel/example_ws/build/learning_tf/build/lib/learning_tf
+[2.603s] running install
+[2.603s] running install_lib
+[2.603s] creating /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf
+[2.603s] copying /home/intel/example_ws/build/learning_tf/build/lib/learning_tf/static_tf_broadcaster.py -> /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf
+[2.603s] copying /home/intel/example_ws/build/learning_tf/build/lib/learning_tf/tf_listener.py -> /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf
+[2.603s] copying /home/intel/example_ws/build/learning_tf/build/lib/learning_tf/__init__.py -> /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf
+[2.603s] copying /home/intel/example_ws/build/learning_tf/build/lib/learning_tf/turtle_following.py -> /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf
+[2.603s] copying /home/intel/example_ws/build/learning_tf/build/lib/learning_tf/turtle_tf_broadcaster.py -> /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf
+[2.604s] byte-compiling /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf/static_tf_broadcaster.py to static_tf_broadcaster.cpython-312.pyc
+[2.604s] byte-compiling /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf/tf_listener.py to tf_listener.cpython-312.pyc
+[2.604s] byte-compiling /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf/__init__.py to __init__.cpython-312.pyc
+[2.604s] byte-compiling /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf/turtle_following.py to turtle_following.cpython-312.pyc
+[2.604s] byte-compiling /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf/turtle_tf_broadcaster.py to turtle_tf_broadcaster.cpython-312.pyc
+[2.604s] running install_data
+[2.604s] creating /home/intel/example_ws/install/learning_tf/share/ament_index
+[2.604s] creating /home/intel/example_ws/install/learning_tf/share/ament_index/resource_index
+[2.604s] creating /home/intel/example_ws/install/learning_tf/share/ament_index/resource_index/packages
+[2.604s] copying resource/learning_tf -> /home/intel/example_ws/install/learning_tf/share/ament_index/resource_index/packages
+[2.604s] copying package.xml -> /home/intel/example_ws/install/learning_tf/share/learning_tf
+[2.604s] creating /home/intel/example_ws/install/learning_tf/share/learning_tf/launch
+[2.604s] copying launch/turtle_following_demo.launch.py -> /home/intel/example_ws/install/learning_tf/share/learning_tf/launch
+[2.604s] running install_egg_info
+[2.604s] Copying ../../../build/learning_tf/learning_tf.egg-info to /home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages/learning_tf-0.0.0-py3.12.egg-info
+[2.605s] running install_scripts
+[2.640s] Installing static_tf_broadcaster script to /home/intel/example_ws/install/learning_tf/lib/learning_tf
+[2.641s] Installing tf_listener script to /home/intel/example_ws/install/learning_tf/lib/learning_tf
+[2.642s] Installing turtle_following script to /home/intel/example_ws/install/learning_tf/lib/learning_tf
+[2.643s] Installing turtle_tf_broadcaster script to /home/intel/example_ws/install/learning_tf/lib/learning_tf
+[2.643s] writing list of installed files to '/home/intel/example_ws/build/learning_tf/install.log'
+[2.708s] Invoked command in '/home/intel/example_ws/src/ros2_21_tutorials/learning_tf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/intel/example_ws/build/learning_tf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/intel/example_ws/install/learning_tf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/learning_tf build --build-base /home/intel/example_ws/build/learning_tf/build install --record /home/intel/example_ws/build/learning_tf/install.log --single-version-externally-managed install_data

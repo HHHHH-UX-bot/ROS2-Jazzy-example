@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<sdf version="1.11">
+  <world name="empty">
+    <physics type="dart">
+      <max_step_size>0.001</max_step_size>
+    </physics>
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1.0</diffuse>
+    </light>
+    <model name="ground">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><plane><size>20 20</size></plane></geometry>
+          <material><ambient>0.5 0.5 0.5</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><plane><size>20 20</size></plane></geometry>
+        </collision>
+      </link>
+    </model>
+  </world>
+</sdf>

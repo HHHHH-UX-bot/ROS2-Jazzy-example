@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "learning_interface/srv/GetObjectPosition_Request",
+      "fields": [
+        {
+          "name": "get",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "learning_interface/srv/GetObjectPosition_Request",
+      "hash_string": "RIHS01_0e70883aba831942be75b57803f09b3e781b3de1d8a0f262009db833c840bc8f"
+    }
+  ]
+}

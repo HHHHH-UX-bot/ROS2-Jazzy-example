@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="M_PI" value="3.1415926"/>
+  <xacro:property name="base_mass"   value="2.0" />
+  <xacro:property name="wheel_mass"  value="0.2" />
+  <xacro:property name="base_size"   value="0.4 0.2 0.1" />
+  <xacro:property name="wheel_radius" value="0.05" />
+  <xacro:property name="wheel_length" value="0.04" />
+  <xacro:property name="caster_radius" value="0.02" />
+  <xacro:property name="caster_length" value="0.02" />
+
+  <material name="body_color">
+    <color rgba="0.2 0.5 0.9 1.0"/>
+  </material>
+  <material name="wheel_color">
+    <color rgba="0.1 0.1 0.1 1.0"/>
+  </material>
+
+  <!-- 底盘 -->
+  <link name="base_link">
+    <visual>
+      <geometry><box size="${base_size}"/></geometry>
+      <material name="body_color"/>
+    </visual>
+    <collision>
+      <geometry><box size="${base_size}"/></geometry>
+    </collision>
+    <inertial>
+      <mass value="${base_mass}"/>
+      <inertia ixx="0.0083" ixy="0" ixz="0" iyy="0.0283" iyz="0" izz="0.0333"/>
+    </inertial>
+  </link>
+
+  <!-- 驱动轮子宏 -->
+  <xacro:macro name="drive_wheel" params="name y">
+    <link name="${name}">
+      <visual>
+        <geometry><cylinder radius="${wheel_radius}" length="${wheel_length}"/></geometry>
+        <material name="wheel_color"/>
+      </visual>
+      <collision>
+        <geometry><cylinder radius="${wheel_radius}" length="${wheel_length}"/></geometry>
+      </collision>
+      <inertial>
+        <mass value="${wheel_mass}"/>
+        <inertia ixx="0.0002" ixy="0" ixz="0" iyy="0.0002" iyz="0" izz="0.0002"/>
+      </inertial>
+    </link>
+
+    <joint name="${name}_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${name}"/>
+      <origin xyz="0 ${y} -0.05" rpy="1.5708 0 0"/>
+      <axis xyz="0 0 -1"/>
+    </joint>
+  </xacro:macro>
+
+  <!-- Caster轮（可自由转向） -->
+  <xacro:macro name="caster_wheel" params="name x y z">
+    <link name="${name}">
+      <visual>
+        <geometry><cylinder radius="${caster_radius}" length="${caster_length}"/></geometry>
+        <material name="wheel_color"/>
+      </visual>
+      <collision>
+        <geometry><cylinder radius="${caster_radius}" length="${caster_length}"/></geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu1>0.1</mu1>
+              <mu2>0.1</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <inertial>
+        <mass value="0.01"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+      </inertial>
+    </link>
+
+    <joint name="${name}_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${name}"/>
+      <origin xyz="${x} ${y} ${z}" rpy="1.5708 0 0"/>
+    </joint>
+  </xacro:macro>
+  <!-- 驱动轮 -->
+  <xacro:drive_wheel name="left_wheel"  y=" 0.12"/>
+  <xacro:drive_wheel name="right_wheel" y="-0.12"/>
+  <!-- Caster轮 -->
+  <xacro:caster_wheel name="front_caster" x="0.15" y="0" z="-0.07"/>
+  <xacro:caster_wheel name="rear_caster" x="-0.15" y="0" z="-0.07"/>
+
+  <gazebo>
+    <plugin
+      filename="libignition-gazebo-diff-drive-system.so"
+      name="ignition::gazebo::systems::DiffDrive">
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>0.24</wheel_separation>
+      <wheel_radius>0.05</wheel_radius>
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>20.0</max_wheel_acceleration>
+      <topic>/model/my_robot/cmd_vel</topic>
+      <odom_topic>/model/my_robot/odometry</odom_topic>
+      <odom_publish_frequency>30</odom_publish_frequency>
+    </plugin>
+  </gazebo>
+  
+  <gazebo>
+    <plugin
+      filename="libgz-sim-joint-state-publisher-system.so"
+      name="gz::sim::systems::JointStatePublisher">
+      <update_rate>30</update_rate>
+    </plugin>
+  </gazebo>
+
+</robot>

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "learning_interface__rs",
+		"source" : "/home/intel/example_ws/build/learning_interface/learning_interface__rs"
+	}
+}

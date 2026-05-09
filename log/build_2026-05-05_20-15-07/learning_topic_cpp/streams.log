@@ -1,0 +1,68 @@
+[1.192s] Invoking command in '/home/intel/example_ws/build/learning_topic_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/intel/example_ws/src/ros2_21_tutorials/learning_topic_cpp -DCMAKE_INSTALL_PREFIX=/home/intel/example_ws/install/learning_topic_cpp
+[1.273s] -- The C compiler identification is GNU 13.3.0
+[1.358s] -- The CXX compiler identification is GNU 13.3.0
+[1.377s] -- Detecting C compiler ABI info
+[1.501s] -- Detecting C compiler ABI info - done
+[1.517s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.518s] -- Detecting C compile features
+[1.518s] -- Detecting C compile features - done
+[1.529s] -- Detecting CXX compiler ABI info
+[1.638s] -- Detecting CXX compiler ABI info - done
+[1.650s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.650s] -- Detecting CXX compile features
+[1.650s] -- Detecting CXX compile features - done
+[1.655s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.810s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.964s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[2.018s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.035s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.056s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.079s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.196s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.201s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.335s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.378s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.418s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.565s] -- Found std_msgs: 5.3.7 (/opt/ros/jazzy/share/std_msgs/cmake)
+[2.586s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.700s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.700s] -- Configured cppcheck include dirs: 
+[2.700s] -- Configured cppcheck exclude dirs and/or files: 
+[2.700s] -- Added test 'lint_cmake' to check CMake code style
+[2.701s] -- Added test 'uncrustify' to check C / C++ code style
+[2.701s] -- Configured uncrustify additional arguments: 
+[2.701s] -- Added test 'xmllint' to check XML markup files
+[2.702s] -- Configuring done (1.5s)
+[2.711s] -- Generating done (0.0s)
+[2.714s] -- Build files have been written to: /home/intel/example_ws/build/learning_topic_cpp
+[2.722s] Invoked command in '/home/intel/example_ws/build/learning_topic_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/intel/example_ws/src/ros2_21_tutorials/learning_topic_cpp -DCMAKE_INSTALL_PREFIX=/home/intel/example_ws/install/learning_topic_cpp
+[2.723s] Invoking command in '/home/intel/example_ws/build/learning_topic_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/intel/example_ws/build/learning_topic_cpp -- -j14 -l14
+[2.765s] [ 50%] [32mBuilding CXX object CMakeFiles/topic_helloworld_sub.dir/src/topic_helloworld_sub.cpp.o[0m
+[2.766s] [ 50%] [32mBuilding CXX object CMakeFiles/topic_helloworld_pub.dir/src/topic_helloworld_pub.cpp.o[0m
+[7.865s] [ 75%] [32m[1mLinking CXX executable topic_helloworld_pub[0m
+[8.007s] [ 75%] Built target topic_helloworld_pub
+[10.502s] [100%] [32m[1mLinking CXX executable topic_helloworld_sub[0m
+[10.737s] [100%] Built target topic_helloworld_sub
+[10.748s] Invoked command in '/home/intel/example_ws/build/learning_topic_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/intel/example_ws/build/learning_topic_cpp -- -j14 -l14
+[10.748s] Invoking command in '/home/intel/example_ws/build/learning_topic_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/intel/example_ws/build/learning_topic_cpp
+[10.754s] -- Install configuration: ""
+[10.754s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/lib/learning_topic_cpp/topic_helloworld_pub
+[10.755s] -- Set non-toolchain portion of runtime path of "/home/intel/example_ws/install/learning_topic_cpp/lib/learning_topic_cpp/topic_helloworld_pub" to ""
+[10.755s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/lib/learning_topic_cpp/topic_helloworld_sub
+[10.757s] -- Set non-toolchain portion of runtime path of "/home/intel/example_ws/install/learning_topic_cpp/lib/learning_topic_cpp/topic_helloworld_sub" to ""
+[10.757s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/ament_index/resource_index/package_run_dependencies/learning_topic_cpp
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/ament_index/resource_index/parent_prefix_path/learning_topic_cpp
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/environment/ament_prefix_path.sh
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/environment/ament_prefix_path.dsv
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/environment/path.sh
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/environment/path.dsv
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/local_setup.bash
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/local_setup.sh
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/local_setup.zsh
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/local_setup.dsv
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/package.dsv
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/ament_index/resource_index/packages/learning_topic_cpp
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/cmake/learning_topic_cppConfig.cmake
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/cmake/learning_topic_cppConfig-version.cmake
+[10.758s] -- Installing: /home/intel/example_ws/install/learning_topic_cpp/share/learning_topic_cpp/package.xml
+[10.760s] Invoked command in '/home/intel/example_ws/build/learning_topic_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/intel/example_ws/build/learning_topic_cpp

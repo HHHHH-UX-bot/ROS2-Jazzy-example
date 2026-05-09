@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "learning_interface/msg/ObjectPosition",
+      "fields": [
+        {
+          "name": "x",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "y",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "learning_interface/msg/ObjectPosition",
+      "hash_string": "RIHS01_7491388171ed6987e2fd976b18f6a1652739c11c8f3c8a5ccb7ef20a21a77663"
+    }
+  ]
+}
