@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find my_robot)/urdf/camera.xacro" />
+  <xacro:include filename="$(find my_robot)/urdf/lidar.xacro" />
   <xacro:property name="M_PI" value="3.1415926"/>
   <xacro:property name="base_mass"   value="2.0" />
   <xacro:property name="wheel_mass"  value="0.2" />
@@ -15,6 +17,12 @@
   <material name="wheel_color">
     <color rgba="0.1 0.1 0.1 1.0"/>
   </material>
+  <material name="black">
+    <color rgba="0 0 0 1.0"/>
+  </material>
+
+  <xacro:camera/>
+  <xacro:rplidar/>
 
   <!-- 底盘 -->
   <link name="base_link">
@@ -91,7 +99,6 @@
   <!-- Caster轮 -->
   <xacro:caster_wheel name="front_caster" x="0.15" y="0" z="-0.07"/>
   <xacro:caster_wheel name="rear_caster" x="-0.15" y="0" z="-0.07"/>
-
   <gazebo>
     <plugin
       filename="libignition-gazebo-diff-drive-system.so"
@@ -105,6 +112,14 @@
       <topic>/model/my_robot/cmd_vel</topic>
       <odom_topic>/model/my_robot/odometry</odom_topic>
       <odom_publish_frequency>30</odom_publish_frequency>
+      <frame_id>my_robot/odom</frame_id>
+      <child_frame_id>my_robot/base_link</child_frame_id>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
     </plugin>
   </gazebo>
   
@@ -115,5 +130,7 @@
       <update_rate>30</update_rate>
     </plugin>
   </gazebo>
+
+
 
 </robot>

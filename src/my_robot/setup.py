@@ -12,7 +12,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/urdf',
-            glob('urdf/*.urdf.xacro')),
+            glob('urdf/*.xacro')),
         ('share/' + package_name + '/worlds',
             glob('worlds/*.sdf')),
         ('share/' + package_name + '/launch',

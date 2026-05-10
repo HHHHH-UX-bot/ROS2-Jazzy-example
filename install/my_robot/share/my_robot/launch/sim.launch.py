@@ -1,1 +1,0 @@
-/home/intel/example_ws/build/my_robot/launch/sim.launch.py
