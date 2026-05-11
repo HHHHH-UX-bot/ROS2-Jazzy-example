@@ -2,9 +2,12 @@ from launch import LaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node, LifecycleNode
 from launch_ros.substitutions import FindPackageShare
-from launch.actions import (IncludeLaunchDescription, TimerAction,
-    EmitEvent, RegisterEventHandler, LogInfo)
+from launch.actions import (DeclareLaunchArgument, IncludeLaunchDescription,
+    TimerAction, EmitEvent, RegisterEventHandler, LogInfo)
+from launch.conditions import IfCondition
 from launch.events import matches_action
+from launch.substitutions import (AndSubstitution, LaunchConfiguration,
+    NotSubstitution)
 from launch_ros.event_handlers import OnStateTransition
 from launch_ros.events.lifecycle import ChangeState
 from launch_ros.descriptions import ParameterFile
@@ -166,12 +169,23 @@ def generate_launch_description():
         parameters=[slam_params_file, {'use_sim_time': True}],
     )
 
+    autostart = LaunchConfiguration('autostart')
+    use_lifecycle_manager = LaunchConfiguration('use_lifecycle_manager')
+
+    declare_autostart = DeclareLaunchArgument(
+        'autostart', default_value='true',
+        description='Automatically startup the slamtoolbox.')
+    declare_use_lifecycle_manager = DeclareLaunchArgument(
+        'use_lifecycle_manager', default_value='false',
+        description='Enable bond connection during node activation')
+
     # 事件驱动生命周期激活（对齐官方 online_async_launch.py）
     config_event = EmitEvent(
         event=ChangeState(
             lifecycle_node_matcher=matches_action(slam),
             transition_id=Transition.TRANSITION_CONFIGURE,
         ),
+        condition=IfCondition(AndSubstitution(autostart, NotSubstitution(use_lifecycle_manager))),
     )
     activate_handler = RegisterEventHandler(
         OnStateTransition(
@@ -186,10 +200,12 @@ def generate_launch_description():
                 )),
             ],
         ),
+        condition=IfCondition(AndSubstitution(autostart, NotSubstitution(use_lifecycle_manager))),
     )
 
 
     return LaunchDescription([
+        declare_autostart, declare_use_lifecycle_manager,
         gz, spawn, rsp,
         bridge_cmd, bridge_odom, bridge_tf, bridge_js,
         bridge_camera, bridge_lidar, lidar_tf,

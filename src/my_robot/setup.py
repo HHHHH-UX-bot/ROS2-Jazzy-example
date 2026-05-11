@@ -33,6 +33,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'scan_relay = my_robot.scan_relay:main',
         ],
     },
 )
