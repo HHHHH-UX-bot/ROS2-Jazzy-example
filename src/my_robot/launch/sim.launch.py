@@ -22,6 +22,7 @@ def generate_launch_description():
     pkg = get_package_share_directory('my_robot')
     config = os.path.join(pkg, 'config', 'slam.yaml')
     world = os.path.join(pkg, 'worlds', 'empty.sdf')
+    #world = '/opt/ros/jazzy/share/ros_gz_sim_demos/worlds/vehicle.sdf'
     xacro = os.path.join(pkg, 'urdf', 'my_robot.urdf.xacro')
     tmp_urdf = os.path.join(tempfile.gettempdir(), 'my_robot.urdf')
 
@@ -38,13 +39,15 @@ def generate_launch_description():
 
     # 3. spawn（延时等 gz 就绪）
     spawn = TimerAction(
-        period=2.0,
+        period=1.0,
         actions=[
             Node(
                 package='ros_gz_sim',
                 executable='create',
                 arguments=['-file', tmp_urdf,
                            '-name', 'my_robot',
+                           '-x' , '5',
+                           '-y' , '5',
                            '-z', '0.12'],
                 output='screen'
             )
@@ -87,9 +90,8 @@ def generate_launch_description():
         executable='parameter_bridge',
         name='bridge_cmd',
         arguments=[
-            '/model/my_robot/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist'
+            '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist'
         ],
-        remappings=[('/model/my_robot/cmd_vel', '/cmd_vel')],
         parameters=[{'use_sim_time': True}],
         output='screen'
     )
@@ -150,13 +152,6 @@ def generate_launch_description():
         output='screen'
     )
 
-    # 发布 odomo → base_link 静态 TF（Gazebo diff-drive 只发 /odomo 话题，不发 TF）
-    #tf_static = Node(
-     #   package='tf2_ros',
-    #    executable='static_transform_publisher',
-    #    arguments=['0', '0', '0', '0', '0', '0', 'my_robot/odomo', 'my_robot/base_link'],
-   #     parameters=[{'use_sim_time': True}],
-   # )
 
     slam_params_file = ParameterFile(config, allow_substs=True)
 

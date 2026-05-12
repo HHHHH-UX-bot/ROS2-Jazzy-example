@@ -109,7 +109,7 @@
       <wheel_radius>0.05</wheel_radius>
       <max_wheel_torque>20</max_wheel_torque>
       <max_wheel_acceleration>20.0</max_wheel_acceleration>
-      <topic>/model/my_robot/cmd_vel</topic>
+      <topic>/cmd_vel</topic>
       <odom_topic>/model/my_robot/odometry</odom_topic>
       <odom_publish_frequency>30</odom_publish_frequency>
       <frame_id>my_robot/odom</frame_id>
