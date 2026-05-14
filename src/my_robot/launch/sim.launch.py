@@ -1,17 +1,8 @@
 from launch import LaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch_ros.actions import Node, LifecycleNode
+from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
-from launch.actions import (DeclareLaunchArgument, IncludeLaunchDescription,
-    TimerAction, EmitEvent, RegisterEventHandler, LogInfo)
-from launch.conditions import IfCondition
-from launch.events import matches_action
-from launch.substitutions import (AndSubstitution, LaunchConfiguration,
-    NotSubstitution)
-from launch_ros.event_handlers import OnStateTransition
-from launch_ros.events.lifecycle import ChangeState
-from launch_ros.descriptions import ParameterFile
-from lifecycle_msgs.msg import Transition
+from launch.actions import (IncludeLaunchDescription,TimerAction,)
 from ament_index_python.packages import get_package_share_directory
 import os
 import subprocess
@@ -21,7 +12,9 @@ import tempfile
 def generate_launch_description():
     pkg = get_package_share_directory('my_robot')
     config = os.path.join(pkg, 'config', 'slam.yaml')
-    world = os.path.join(pkg, 'worlds', 'empty.sdf')
+    world_name = 'maze'
+    world = os.path.join(pkg, 'worlds', f'{world_name}.sdf')
+    #world = os.path.join(pkg, 'worlds', 'empty.sdf')
     #world = '/opt/ros/jazzy/share/ros_gz_sim_demos/worlds/vehicle.sdf'
     xacro = os.path.join(pkg, 'urdf', 'my_robot.urdf.xacro')
     tmp_urdf = os.path.join(tempfile.gettempdir(), 'my_robot.urdf')
@@ -46,9 +39,8 @@ def generate_launch_description():
                 executable='create',
                 arguments=['-file', tmp_urdf,
                            '-name', 'my_robot',
-                           '-x' , '5',
-                           '-y' , '5',
-                           '-z', '0.12'],
+                           '-y','-0.5',
+                           '-z', '0.08'],
                 output='screen'
             )
         ]
@@ -73,12 +65,12 @@ def generate_launch_description():
         executable='parameter_bridge',
         name='bridge_js',
         arguments=[
-            '/world/empty/model/my_robot/joint_state'
+            f'/world/{world_name}/model/my_robot/joint_state'
             '@sensor_msgs/msg/JointState'
             '[gz.msgs.Model'
         ],
         remappings=[
-            ('/world/empty/model/my_robot/joint_state', '/joint_states')
+            (f'/world/{world_name}/model/my_robot/joint_state', '/joint_states')
         ],
         parameters=[{'use_sim_time': True}],
         output='screen'
@@ -152,57 +144,48 @@ def generate_launch_description():
         output='screen'
     )
 
+    # slam=IncludeLaunchDescription(  # 导航模式用已有地图，注释掉 SLAM
+    #     PythonLaunchDescriptionSource(
+    #         [FindPackageShare('slam_toolbox'),'/launch/online_async_launch.py']
+    #     ),
+    #     launch_arguments={
+    #         'slam_params_file':config
+    #     }.items(),
+    # )
 
-    slam_params_file = ParameterFile(config, allow_substs=True)
+    nav=IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            [FindPackageShare('nav2_bringup'),'/launch/bringup_launch.py']
+        ),
+        launch_arguments={
+            'map':'/home/intel/maps/my_slam_map.yaml',
+            'use_sim_time':'true',
+            'params_file':'/home/intel/example_ws/src/my_robot/config/nav2_params.yaml',
+        }.items(),
+    )
 
-    slam = LifecycleNode(
-        package='slam_toolbox',
-        executable='async_slam_toolbox_node',
-        name='slam_toolbox',
-        namespace='',
+    rviz2=Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        parameters=[{'use_sim_time': True}],
         output='screen',
-        parameters=[slam_params_file, {'use_sim_time': True}],
     )
 
-    autostart = LaunchConfiguration('autostart')
-    use_lifecycle_manager = LaunchConfiguration('use_lifecycle_manager')
+    ld = LaunchDescription()
 
-    declare_autostart = DeclareLaunchArgument(
-        'autostart', default_value='true',
-        description='Automatically startup the slamtoolbox.')
-    declare_use_lifecycle_manager = DeclareLaunchArgument(
-        'use_lifecycle_manager', default_value='false',
-        description='Enable bond connection during node activation')
+    ld.add_action(gz)
+    ld.add_action(spawn)
+    ld.add_action(rsp)
+    ld.add_action(bridge_cmd)
+    ld.add_action(bridge_odom)
+    ld.add_action(bridge_tf)
+    ld.add_action(bridge_js)
+    ld.add_action(bridge_camera)
+    ld.add_action(bridge_lidar)
+    ld.add_action(lidar_tf)
+    # ld.add_action(slam)  # 导航模式注释
+    ld.add_action(nav)
+    ld.add_action(rviz2)
 
-    # 事件驱动生命周期激活（对齐官方 online_async_launch.py）
-    config_event = EmitEvent(
-        event=ChangeState(
-            lifecycle_node_matcher=matches_action(slam),
-            transition_id=Transition.TRANSITION_CONFIGURE,
-        ),
-        condition=IfCondition(AndSubstitution(autostart, NotSubstitution(use_lifecycle_manager))),
-    )
-    activate_handler = RegisterEventHandler(
-        OnStateTransition(
-            target_lifecycle_node=slam,
-            start_state='configuring',
-            goal_state='inactive',
-            entities=[
-                LogInfo(msg='[LifecycleLaunch] Slamtoolbox node is activating.'),
-                EmitEvent(event=ChangeState(
-                    lifecycle_node_matcher=matches_action(slam),
-                    transition_id=Transition.TRANSITION_ACTIVATE,
-                )),
-            ],
-        ),
-        condition=IfCondition(AndSubstitution(autostart, NotSubstitution(use_lifecycle_manager))),
-    )
-
-
-    return LaunchDescription([
-        declare_autostart, declare_use_lifecycle_manager,
-        gz, spawn, rsp,
-        bridge_cmd, bridge_odom, bridge_tf, bridge_js,
-        bridge_camera, bridge_lidar, lidar_tf,
-        slam, config_event, activate_handler,
-    ])
+    return ld

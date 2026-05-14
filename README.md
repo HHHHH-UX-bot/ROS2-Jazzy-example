@@ -1,0 +1,1 @@
+# 运行nav导航时打开rviz必须点左上角add new Panel添加navgation2 插件后才会启动导航，使用 Nav Goal画点才能有效发送action请求
