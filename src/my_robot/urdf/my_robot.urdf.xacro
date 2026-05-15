@@ -67,19 +67,11 @@
   <xacro:macro name="caster_wheel" params="name x y z">
     <link name="${name}">
       <visual>
-        <geometry><cylinder radius="${caster_radius}" length="${caster_length}"/></geometry>
+        <geometry><sphere radius="${caster_radius}"/></geometry>
         <material name="wheel_color"/>
       </visual>
       <collision>
-        <geometry><cylinder radius="${caster_radius}" length="${caster_length}"/></geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu1>0.1</mu1>
-              <mu2>0.1</mu2>
-            </ode>
-          </friction>
-        </surface>
+        <geometry><sphere radius="${caster_radius}"/></geometry>
       </collision>
       <inertial>
         <mass value="0.01"/>
@@ -87,11 +79,17 @@
       </inertial>
     </link>
 
-    <joint name="${name}_joint" type="continuous">
+    <joint name="${name}_joint" type="fixed">
       <parent link="base_link"/>
       <child link="${name}"/>
-      <origin xyz="${x} ${y} ${z}" rpy="1.5708 0 0"/>
+      <origin xyz="${x} ${y} ${z}" rpy="0 0 0"/>
     </joint>
+
+    <gazebo reference="${name}">
+      <mu1>0.0</mu1>
+      <mu2>0.0</mu2>
+      <kp>1000000.0</kp> <kd>100.0</kd>     <material>Gazebo/Black</material>
+    </gazebo>
   </xacro:macro>
   <!-- 驱动轮 -->
   <xacro:drive_wheel name="left_wheel"  y=" 0.12"/>

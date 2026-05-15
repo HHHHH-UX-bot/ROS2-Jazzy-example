@@ -1,3 +1,11 @@
+slam_toolbox:
+  ros__parameters:
+    map_frame: my_robot/map
+    odom_frame: my_robot/odom
+    base_frame: my_robot/base_link
+    scan_topic: /lidar/scan
+    mode: mapping
+
 amcl:
   ros__parameters:
     alpha1: 0.2

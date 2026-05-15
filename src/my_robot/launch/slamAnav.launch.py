@@ -31,7 +31,7 @@ def generate_launch_description():
             [FindPackageShare('nav2_bringup'),'/launch/bringup_launch.py']
         ),
         launch_arguments={
-            'map':'/home/intel/maps/my_slam_map.yaml',
+            'slam':'True',
             'use_sim_time':'true',
             'params_file':'/home/intel/example_ws/src/my_robot/config/nav2_params.yaml',
         }.items(),
